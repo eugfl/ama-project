@@ -28,4 +28,5 @@ func main() {
         log.Println("Error running tern migrate:", stderr.String())
         panic(err)
     }
+    log.Println("Migration completed! 🎉")
 }

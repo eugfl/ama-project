@@ -17,10 +17,10 @@ services:
     depends_on:
       - db
     ports:
-      - 8081:80
+      - ${WSRS_PGADMIN_PORT:-8081}:80
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_DEFAULT_EMAIL: ${WSRS_PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${WSRS_PGADMIN_PASSWORD}
     volumes:
       - pgadmin:/var/lib/pgadmin
 
